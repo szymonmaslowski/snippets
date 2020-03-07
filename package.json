@@ -1,0 +1,25 @@
+{
+  "name": "snippets",
+  "version": "0.0.0",
+  "description": "Bunch of useful code snippets",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "snippets/*"
+  ],
+  "scripts": {
+    "format": "wsrun -se -c format"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
+    "prettier": "^1.19.1",
+    "wsrun": "^5.2.0"
+  }
+}
