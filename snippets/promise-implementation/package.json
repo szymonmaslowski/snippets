@@ -1,0 +1,16 @@
+{
+  "name": "@snippets/promise-reimplementation",
+  "version": "0.0.0",
+  "main": "P.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "run-s test:*",
+    "test:for-reimplementation": "mocha **/*.test.js",
+    "test:for-original": "ORIGINAL_PROMISE=true mocha **/*.test.js"
+  },
+  "devDependencies": {
+    "eslint-plugin-mocha": "^6.3.0",
+    "mocha": "^7.1.0",
+    "npm-run-all": "^4.1.5"
+  }
+}

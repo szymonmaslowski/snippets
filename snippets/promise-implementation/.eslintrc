@@ -1,0 +1,15 @@
+{
+  "env": {
+    "mocha": true
+  },
+  "plugins": [
+    "mocha"
+  ],
+  "extends": [
+    "plugin:mocha/recommended"
+  ],
+  "rules": {
+    "no-underscore-dangle": "off",
+    "mocha/no-mocha-arrows": "off"
+  }
+}
