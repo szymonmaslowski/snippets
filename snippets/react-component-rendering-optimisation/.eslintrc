@@ -3,12 +3,12 @@
     "browser": true
   },
   "parser": "babel-eslint",
+  "plugins": [
+    "babel"
+  ],
   "extends": [
     "airbnb",
     "prettier/react"
-  ],
-  "plugins": [
-    "babel"
   ],
   "rules": {
     "react/prop-types": "off"
