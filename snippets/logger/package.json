@@ -1,0 +1,6 @@
+{
+  "name": "@snippets/logger",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./logger.js"
+}
