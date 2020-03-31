@@ -1,0 +1,11 @@
+{
+  "name": "@snippets/svg-icon-adjusting-to-font",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "serve ./index.js"
+  },
+  "devDdependencies": {
+    "@snippets/webpack-server": "0.0.0"
+  }
+}
