@@ -1,0 +1,18 @@
+{
+  "name": "@snippets/redux-saga-workshop",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "babel-node snippets"
+  },
+  "dependencies": {
+    "@snippets/logger": "^0.0.0",
+    "redux": "^4.0.5",
+    "redux-saga": "^1.1.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.0"
+  }
+}
