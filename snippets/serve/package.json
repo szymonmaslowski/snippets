@@ -1,5 +1,5 @@
 {
-  "name": "@snippets/webpack-server",
+  "name": "@snippets/serve",
   "version": "0.0.0",
   "private": true,
   "license": "MIT",
@@ -10,6 +10,7 @@
     "format": "eslint --fix bin/serve.js config/webpack.config.js"
   },
   "dependencies": {
+    "@babel/core": "^7.9.0",
     "babel-loader": "^8.0.6",
     "html-webpack-plugin": "^3.2.0",
     "svg-inline-loader": "^0.8.2",
