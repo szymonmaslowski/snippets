@@ -4,6 +4,7 @@ A monorepo of many various and unrelated code snippets, small applications or co
 
 ## Contents
 
+1. [babel preset](./snippets/babel-preset) - package gathering various babel presets used by other packages
 1. [git commands](./snippets/git-commands) - a notebook of useful git commands
 1. [logger](./snippets/logger) - simple logger with context, colors and configurability via environment variables
 1. [promise implmentation](./snippets/promise-implementation) - a try to fully reference an API and behavior of the `Promise` in a node environment
