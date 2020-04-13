@@ -8,8 +8,10 @@
   ],
   "rules": {
     "prettier/prettier": "error",
+    "arrow-parens": "off",
     "no-console": ["error", {
       "allow": ["error", "info"]
     }]
-  }
+  },
+  "ignorePatterns": ["node_modules/"]
 }

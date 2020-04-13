@@ -1,0 +1,25 @@
+{
+  "env": {
+    "browser": true,
+    "mocha": true
+  },
+  "parser": "babel-eslint",
+  "plugins": [
+    "babel",
+    "mocha"
+  ],
+  "extends": [
+    "airbnb",
+    "prettier/react",
+    "plugin:mocha/recommended"
+  ],
+  "rules": {
+    "arrow-parens": "off",
+    "func-names": "off",
+    "object-curly-newline": "off",
+    "space-before-function-paren": "off",
+    "mocha/no-global-tests": "off",
+    "react/prop-types": "off",
+    "react/jsx-curly-brace-presence": "off"
+  }
+}

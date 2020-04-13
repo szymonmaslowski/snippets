@@ -1,0 +1,29 @@
+{
+  "name": "@snippets/redux-saga-exercises",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "yarn start:ex1",
+    "start:ex1": "serve ./exercises/1-countdown",
+    "exec-test": "mocha --require @babel/register --require regenerator-runtime/runtime",
+    "test": "yarn test:ex1",
+    "test:ex1": "yarn exec-test ./exercises/1-countdown/saga.test.js"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "redux": "^4.0.5",
+    "redux-saga": "^1.1.3",
+    "regenerator-runtime": "^0.13.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/register": "^7.9.0",
+    "@snippets/babel-preset": "0.0.0",
+    "@snippets/serve": "0.0.0",
+    "eslint-plugin-mocha": "^6.3.0",
+    "mocha": "^7.1.0"
+  }
+}
