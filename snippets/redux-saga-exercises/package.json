@@ -6,7 +6,7 @@
     "start": "yarn start:ex1",
     "start:ex1": "serve ./exercises/1-countdown",
     "exec-test": "mocha --require @babel/register --require regenerator-runtime/runtime",
-    "test": "yarn test:ex1",
+    "test": "SOLUTION=true yarn test:ex1",
     "test:ex1": "yarn exec-test ./exercises/1-countdown/saga.test.js"
   },
   "dependencies": {

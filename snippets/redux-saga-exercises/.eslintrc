@@ -16,9 +16,11 @@
   "rules": {
     "arrow-parens": "off",
     "func-names": "off",
+    "global-require": "off",
     "object-curly-newline": "off",
     "space-before-function-paren": "off",
     "mocha/no-global-tests": "off",
+    "mocha/no-mocha-arrows": "off",
     "react/prop-types": "off",
     "react/jsx-curly-brace-presence": "off"
   }
