@@ -1,6 +1,7 @@
+const scheduler = require('@snippets/scheduler');
 const assert = require('assert');
 const P = require('./P');
-const { scheduler, postponeDone } = require('./test-utils');
+const { postponeDone } = require('./test-utils');
 
 const originalPromise = process.env.ORIGINAL_PROMISE === 'true';
 

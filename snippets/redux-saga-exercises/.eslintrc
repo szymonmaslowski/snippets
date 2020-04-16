@@ -20,6 +20,7 @@
     "object-curly-newline": "off",
     "space-before-function-paren": "off",
     "mocha/no-global-tests": "off",
+    "mocha/no-hooks-for-single-case": "off",
     "mocha/no-mocha-arrows": "off",
     "react/prop-types": "off",
     "react/jsx-curly-brace-presence": "off"

@@ -1,3 +1,4 @@
+import scheduler from '@snippets/scheduler';
 import assert from 'assert';
 import createStore from './store';
 
@@ -12,6 +13,10 @@ if (testingSolution) {
 const wait = time => new Promise(r => setTimeout(r, time));
 
 describe('Exercise 1: countdown', () => {
+  afterEach(async () => {
+    await scheduler.run();
+  });
+
   it('achieves functionality', async function() {
     this.timeout(5000);
     const originalConsoleInfo = console.info;
@@ -20,6 +25,9 @@ describe('Exercise 1: countdown', () => {
       loggedMessages += `${args.join(' ')}\n`;
     };
     console.info = log;
+    scheduler.add(() => {
+      console.info = originalConsoleInfo;
+    });
 
     const store = createStore({ saga });
     log('starting');
@@ -44,9 +52,6 @@ Counting down!
 Finished!
 three seconds later
 `;
-
     assert.equal(loggedMessages, expectedLoggedMessages);
-
-    console.info = originalConsoleInfo;
   });
 });
