@@ -19,39 +19,54 @@ describe('callback-chain', () => {
     chain.run();
     expect(executed).toBe(true);
   });
+  test('supports chaining methods', () => {
+    expect(() => {
+      chain
+        .append(() => {})
+        .append(() => {})
+        .run()
+        .append(() => {})
+        .run()
+        .run();
+    }).not.toThrow();
+  });
   test('passes to the appended callbacks all arguments provided to the run method in correct order', () => {
     const arg1 = {};
     const arg2 = {};
-    chain.append((...args) => {
-      expect(args).toContain(arg1, arg2, expect.any(Function));
-    });
-    chain.run(arg1, arg2);
+    chain
+      .append((...args) => {
+        expect(args).toContain(arg1, arg2, expect.any(Function));
+      })
+      .run(arg1, arg2);
   });
   test('invokes appended callbacks in the correct order', () => {
     const calls = new Set();
-    chain.append(() => {
-      calls.add(1);
-    });
-    chain.append(() => {
-      calls.add(2);
-    });
-    chain.run();
+    chain
+      .append(() => {
+        calls.add(1);
+      })
+      .append(() => {
+        calls.add(2);
+      })
+      .run();
     expect(calls).toEqual(new Set([2, 1]));
   });
   test('invokes callbacks that has been appended later', () => {
     const mock = jest.fn();
-    chain.run();
-    chain.append(mock);
-    chain.run();
+    chain
+      .run()
+      .append(mock)
+      .run();
     expect(mock).toHaveBeenCalledTimes(1);
   });
   test("doesn't invoke the callback again if it requested removal from the chain", () => {
     const mock = jest.fn().mockImplementation(removeEyelet => {
       removeEyelet();
     });
-    chain.append(mock);
-    chain.run();
-    chain.run();
+    chain
+      .append(mock)
+      .run()
+      .run();
     expect(mock).toHaveBeenCalledTimes(1);
   });
 });

@@ -1,10 +1,13 @@
 const createCallbackChain = () => {
   let firstEyelet = () => {};
+  let instance = null;
 
-  const run = (...args) =>
+  const run = (...args) => {
     firstEyelet(...args, replacement => {
       firstEyelet = replacement;
     });
+    return instance;
+  };
 
   const append = callback => {
     let oldFirstEyelet = firstEyelet;
@@ -25,12 +28,16 @@ const createCallbackChain = () => {
       callback(...userArgs, removeEyelet);
       oldFirstEyelet(...userArgs, takeOutEyelet);
     };
+
+    return instance;
   };
 
-  return {
+  instance = {
     run,
     append,
   };
+
+  return instance;
 };
 
 export default createCallbackChain;
