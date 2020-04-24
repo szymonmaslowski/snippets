@@ -1,3 +1,7 @@
-module.exports = () => ({
-  presets: ['@babel/preset-env'],
+const defaultOptions = {
+  targets: {},
+};
+
+module.exports = (_, { targets } = defaultOptions) => ({
+  presets: [['@babel/preset-env', { targets }]],
 });

@@ -1,0 +1,6 @@
+{
+  "rules": {
+    "import/no-dynamic-require": "off",
+    "import/no-extraneous-dependencies": "off"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "callback-chain",
+  "version": "1.0.0",
+  "main": "lib/callback-chain.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fredZgred/snippets",
+    "directory": "snippets/callback-chain"
+  },
+  "author": "Szymon Maslowski <i.am.szymon.maslowski@gmail.com>",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "prebuild": "rimraf lib",
+    "build": "rollup -c",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/register": "^7.9.0",
+    "@snippets/babel-preset": "^0.0.0",
+    "babel-jest": "^25.3.0",
+    "eslint-plugin-jest": "^23.8.2",
+    "jest": "^25.3.0",
+    "mockery": "^2.1.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.6.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  }
+}
