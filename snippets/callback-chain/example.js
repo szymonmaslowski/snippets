@@ -3,20 +3,23 @@ import createChain from 'callback-chain';
 
 const chain = createChain();
 
-chain.append((jobName, ready, removeEyelet) => {
-  console.info(` - "zero" callback received arguments: "${jobName}" ${ready}`);
-  if (jobName === 'zero' && ready) {
-    console.info(' - removing callback for "zero"');
-    removeEyelet();
-  }
-});
-chain.append((jobName, ready, removeEyelet) => {
-  console.info(` - "two" callback received arguments: "${jobName}" ${ready}`);
-  if (jobName === 'two' && ready) {
-    console.info(' - removing callback for "two"');
-    removeEyelet();
-  }
-});
+chain
+  .append((jobName, ready, removeEyelet) => {
+    console.info(
+      ` - "zero" callback received arguments: "${jobName}" ${ready}`,
+    );
+    if (jobName === 'zero' && ready) {
+      console.info(' - removing callback for "zero"');
+      removeEyelet();
+    }
+  })
+  .append((jobName, ready, removeEyelet) => {
+    console.info(` - "two" callback received arguments: "${jobName}" ${ready}`);
+    if (jobName === 'two' && ready) {
+      console.info(' - removing callback for "two"');
+      removeEyelet();
+    }
+  });
 
 setTimeout(() => {
   console.info('Running the chain with arguments: "zero" true');
@@ -42,4 +45,4 @@ Running the chain with arguments: "two" true
  - "two" callback received arguments: "two" true
  - removing callback for "two"
 Running the chain with arguments: "three" true
- */
+*/

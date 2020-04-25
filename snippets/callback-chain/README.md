@@ -21,18 +21,24 @@ import createChain from 'callback-chain';
 
 const chain = createChain();
 
-chain.append((value, removeEyelet) => {
-  console.info('Consumed', value);
-  removeEyelet();
-});
+chain.append((run, value) => console.info(`Run ${run}. Consumed "${value}"`));
+chain.run(1, 'the value');
 
-chain.run('the value');
-chain.run('another value');
+chain
+  .append((run, value, removeEyelet) => {
+    removeEyelet();
+    console.info(`Run ${run}. Consumed "${value}" and removed the callback`);
+  })
+  .run(2, 'another value')
+  .run(3, 'yet another value');
 ```
 
 Output:
 ```
-Consumed the value
+Run 1. Consumed "the value"
+Run 2. Consumed "another value" and removed the callback
+Run 2. Consumed "another value"
+Run 3. Consumed "yet another value"
 ```
 
 ## Docs

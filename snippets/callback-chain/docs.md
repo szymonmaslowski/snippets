@@ -49,21 +49,22 @@ The chain is an object with two methods:
   - [chain.append(callback)](#appendcallback)
   - [chain.run([...args])](#runargs)
 
-#### append(callback)
+#### append(callback) => chain
 
-The `chain.append()` accepts a _callback_ argument of function type.
-It stores/appends the callback to the callbacks chain (a sequence of callbacks).
-Once the chain is being requested to run, the stored callback gets invoked.
+The `chain.append()` accepts a _callback_ argument of function type
+and stores/appends it to the callbacks chain (a sequence of callbacks).
+It returns the chain instance object, so the methods can be "chained".
 
 The `chain.append()` can be called multiple times regardless the invocation
-of the `chain.run()` method.
+of the `chain.run()` method. Once the chain is requested
+to run, the stored callback gets invoked.
 
 ##### callback([...args], removeEyelet)
 
 The `callback` argument is a function which does not have strictly defined
 list of arguments. It receives the arguments of the `chain.run()` method.
 
-Despite the all arguments inherited from the `chain.run()` method, the
+Despite the arguments inherited from the `chain.run()` method, the
 `callback` always receives one additional argument at the last position of the
 arguments list, which is the `removeEyelet` function.
 
@@ -71,12 +72,12 @@ The `removeEyelet` function removes particular callback from the chain instance,
 which means that particular callback will not be invoked anymore during subsequent
 chain executions.
 
-#### run([...args])
+#### run([...args]) => chain
 
 The `chain.run()` runs all callbacks in the chain. Appended callbacks get
 invoked in the reversed order of which they have been appended using
 `chain.append()` method. All of provided arguments are passed to each callback
-in the chain.
+in the chain. It returns the chain instance object, so the methods can be "chained".
 
 ## Usage example
 
