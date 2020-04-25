@@ -3,11 +3,8 @@
   "version": "1.1.0",
   "main": "lib/callback-chain.js",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/fredZgred/snippets",
-    "directory": "snippets/callback-chain"
-  },
+  "homepage": "https://github.com/fredZgred/snippets/tree/master/snippets/callback-chain#readme",
+  "repository": "https://github.com/fredZgred/snippets/tree/master/snippets/callback-chain",
   "author": "Szymon Maslowski <i.am.szymon.maslowski@gmail.com>",
   "files": [
     "lib"
