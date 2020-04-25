@@ -46,8 +46,8 @@ const chainTwo = createChanin();
 ### chain
 
 The chain is an object with two methods:
-  - [chain.append(callback)](#appendcallback)
-  - [chain.run([...args])](#runargs)
+  - [chain.append(callback)](#appendcallback--chain)
+  - [chain.run([...args])](#runargs--chain)
 
 #### append(callback) => chain
 
