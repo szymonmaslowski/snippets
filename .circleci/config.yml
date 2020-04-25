@@ -3,7 +3,7 @@ version: 2
 defaults: &defaults
   working_directory: ~/repo
   docker:
-    - image: circleci/node:10
+    - image: circleci/node:lts
 
 jobs:
   test:
@@ -22,9 +22,37 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "yarn.lock" }}
+      - persist_to_workspace:
+          root: ~/repo
+          paths: .
+
+  deploy:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - run:
+          name: Navigate to package directory, build and publish
+          command: |
+            set -e
+            cd $(yarn -s snippets-print-package-path-from-tag $CIRCLE_TAG)
+            yarn build
+            echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ./.npmrc
+            npm publish
 
 workflows:
   version: 2
-  workflow:
+  test-and-deploy:
     jobs:
-      - test
+      - test:
+          filters:
+            tags:
+              only: /.*/
+      - deploy:
+          requires:
+            - test
+          filters:
+            tags:
+              only: /.*/
+            branches:
+              ignore: /.*/

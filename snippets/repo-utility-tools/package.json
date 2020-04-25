@@ -1,0 +1,21 @@
+{
+  "name": "@snippets/repo-utility-tools",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "test": "mocha test/*.test.js"
+  },
+  "bin": {
+    "snippets-print-package-path-from-tag": "bin/print-package-path-from-tag.js",
+    "snippets-release": "bin/release.js"
+  },
+  "dependencies": {
+    "semver": "^7.3.2"
+  },
+  "devDependencies": {
+    "@snippets/scheduler": "^0.0.0",
+    "eslint-plugin-mocha": "^6.3.0",
+    "mocha": "^7.1.1",
+    "semver": "^7.3.2"
+  }
+}
