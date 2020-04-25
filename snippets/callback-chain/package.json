@@ -1,6 +1,6 @@
 {
   "name": "callback-chain",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "lib/callback-chain.js",
   "license": "MIT",
   "homepage": "https://github.com/fredZgred/snippets/tree/master/snippets/callback-chain#readme",
