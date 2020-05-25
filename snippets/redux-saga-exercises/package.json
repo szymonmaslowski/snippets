@@ -5,6 +5,7 @@
   "scripts": {
     "start": "yarn start:ex1",
     "start:ex1": "serve ./exercises/1-countdown",
+    "start:ex2": "node ./exercises/2-data-fetching/server.js & serve ./exercises/2-data-fetching",
     "exec-test": "mocha --require @babel/register --require regenerator-runtime/runtime",
     "test": "SOLUTION=true yarn test:ex1",
     "test:ex1": "yarn exec-test ./exercises/1-countdown/saga.test.js"

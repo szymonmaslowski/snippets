@@ -317,4 +317,48 @@ describe(description, () => {
       });
     }),
   );
+
+  it(
+    'a',
+    postponeDone(done => {
+      const handler = (_, b) => {
+        console.info('UNHANDLED REJECTION', p === b);
+      };
+      process.on('unhandledRejection', handler);
+      scheduler.add(() => {
+        process.off('unhandledRejection', handler);
+      });
+
+      const p = ThePromise.reject();
+      ThePromise.reject().catch(() => {
+        console.info(2);
+      });
+      new ThePromise((_, reject) => {
+        setTimeout(() => {
+          reject();
+        });
+      }).catch(() => {
+        console.info(1);
+      });
+      setTimeout(() => {
+        console.info('ATTACHING');
+        p.catch(() => {
+          console.info(3);
+        });
+      });
+      console.info(0);
+      setTimeout(done, 600);
+
+      const theError = new Error('The Error');
+      const promise = ThePromise.reject().catch(() =>
+        ThePromise.reject(theError),
+      );
+      promise.then(() => {
+        done(new Error('The promise got resolved while it should not'));
+      });
+      promise.catch(e => {
+        doAssertion(done, theError, e);
+      });
+    }),
+  );
 });

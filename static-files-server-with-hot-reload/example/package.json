@@ -1,0 +1,14 @@
+{
+  "name": "example",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "../bin/start.js src web_modules",
+    "postinstall": "snowpack"
+  },
+  "dependencies": {
+    "emotion": "^10.0.27"
+  },
+  "devDependencies": {
+    "snowpack": "^1.5.2"
+  }
+}
