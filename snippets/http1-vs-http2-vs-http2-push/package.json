@@ -1,0 +1,18 @@
+{
+  "name": "http1-vs-http2-vs-http2-push",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn start:all",
+    "start:h1": "node src h1",
+    "start:h2": "node src h2",
+    "start:h2-push": "node src h2-push",
+    "start:all": "node src all"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mime-types": "^2.1.27",
+    "modulik": "^0.2.3",
+    "pem": "^1.14.4"
+  }
+}

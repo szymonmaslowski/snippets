@@ -1,0 +1,7 @@
+{
+  "rules": {
+    "no-console": ["error", {
+      "allow": ["error", "info", "time", "timeEnd"]
+    }]
+  }
+}
