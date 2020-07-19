@@ -7,9 +7,9 @@ and watching how fast the page is being rendered.
 ## Description
 
 There are three servers implementations:
- - [h1](#src/h1.js)
- - [h2](#src/h2.js)
- - [h2-push](#src/h2-push.js)
+ - [h1](src/h1.js)
+ - [h2](src/h2.js)
+ - [h2-push](src/h2-push.js)
 
 All of them serve an `index.html` file which renders a number of image assets.
 
