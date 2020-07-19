@@ -25,7 +25,13 @@ it via [query param](#steer-with-query-params).
 
 ## Run
 
-Start a server running command:
+Start all three servers at once:
+
+```bash
+yarn start
+```
+
+or start a specific server running command:
 
 ```bash
 yarn start:<type>
@@ -43,7 +49,7 @@ yarn start:h2-push
 
 1. Navigate to [https://localhost:3000](https://localhost:3000) in your browser to access server you run.
 
-    > If you used `start:all` command all servers will start and will be accessible on ports
+    > If you used `start` or `start:all` commands all servers will start and will be accessible on ports
     [3000](https://localhost:3000), [3001](https://localhost:3001) and [3002](https://localhost:3002).
 
 1. Confirm the invalid certificate warning (servers use self signed certificate for the TLS connection).
