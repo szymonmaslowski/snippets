@@ -1,11 +1,13 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
+const projectName = path.parse(process.cwd()).name;
 const htmlTemplate = `
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Snippet</title>
+  <title>${projectName}</title>
 </head>
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
