@@ -13,6 +13,7 @@ A monorepo of many various and rather unrelated code snippets, small application
 1. [react components rendering optimisation](./snippets/react-component-rendering-optimisation) - comparison of react rendering optimisation ways
 1. [redux saga effects showcase](./snippets/redux-saga-effects-showcase) - bunch of snippets showing usage of basic redux saga effects
 1. [redux saga exercises](./snippets/redux-saga-exercises) - few redux-saga exercises illustrating common use cases
+1. [Renderere](./snippets/renderere) - component based lightweight HTML builder inspired by React
 1. [scheduler](./snippets/scheduler) - primitive queueing callbacks and running them on demand
 1. [serve](./snippets/serve) - just a common webpack config and executable running webpack dev server. Reused by other snippets
 1. [svg icon adjusting to font](./snippets/svg-icon-adjusting-to-font) - a css styling making svg image adjust to font size and color

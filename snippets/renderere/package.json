@@ -1,0 +1,12 @@
+{
+  "name": "@snippets/renderere",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./renderere.js",
+  "scripts": {
+    "example": "serve ./example.js"
+  },
+  "dependencies": {
+    "@snippets/serve": "^0.0.0"
+  }
+}
