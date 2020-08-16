@@ -6,6 +6,6 @@
     "start": "serve ./index.js"
   },
   "devDdependencies": {
-    "@snippets/serve": "0.0.0"
+    "@snippets/serve": "^0.0.0"
   }
 }

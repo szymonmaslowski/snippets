@@ -11,7 +11,7 @@
     "redux-saga": "^1.1.3"
   },
   "devDependencies": {
-    "@snippets/babel-preset": "0.0.0",
+    "@snippets/babel-preset": "^0.0.0",
     "@babel/core": "^7.9.0",
     "@babel/node": "^7.8.7",
     "@babel/preset-env": "^7.9.0"
