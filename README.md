@@ -18,3 +18,4 @@ A monorepo of many various and rather unrelated code snippets, small application
 1. [serve](./snippets/serve) - just a common webpack config and executable running webpack dev server. Reused by other snippets
 1. [svg icon adjusting to font](./snippets/svg-icon-adjusting-to-font) - a css styling making svg image adjust to font size and color
 1. [tic tac toe](./snippets/tic-tac-toe) - a tic tac toe game built using renderere.
+1. [xstate examples](./snippets/xstate-examples) - examples of Xstate various features usages.
