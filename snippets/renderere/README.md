@@ -1,5 +1,7 @@
 # Renderere
 
+> This package is not published yet, so you can't install it.
+
 Component based lightweight HTML builder.
 
 `Rendere` is inspired by [React](https://reactjs.org/) in terms of its principles:
@@ -7,15 +9,15 @@ Component based lightweight HTML builder.
  - component-based
  - declarative
  
-`Rnderere` is however far less powerful than React. 😵💔
+`Rnderere` is however far less powerful than React 😵💔, **but it doesn't aspire to!**
 
-So why to even bother anyway?
+**The key concept behind is to have minimal set of functionalities to comfortably build small apps.**
 
 If
  - you want to create a simple web page (e.g. landing page),
- - using React would be an overkill in your case,
+ - using React or other frontend framework would be an overkill in your case,
  - you see benefits coming from componentization,
- - you got used to write everything in js,
+ - you got used to writing everything in JS,
  
 then give `Renderere` a chance! 👍
 
