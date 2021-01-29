@@ -68,3 +68,9 @@ yarn start:6
 
 Topics:
 - running services returning promises
+
+## 7. Routing with react-router
+
+https://codesandbox.io/s/e3xnp?file=/src/signup/index.js
+
+
