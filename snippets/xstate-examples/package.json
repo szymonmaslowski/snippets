@@ -4,14 +4,14 @@
   "license": "MIT",
   "scripts": {
     "start": "yarn start:1",
-    "start:1": "node examples/1-runnning-the-machine",
+    "start:1": "node ./examples/1-runnning-the-machine",
     "start:2": "serve ./examples/2-actions",
     "start:3": "node ./examples/3-context",
     "start:4": "node ./examples/4-guards",
-    "start:5": "serve examples/5-react"
+    "start:5": "serve ./examples/5-react",
+    "start:6": "serve ./examples/6-invoking-services"
   },
   "dependencies": {
-    "@xstate/inspect": "^0.4.1",
     "@xstate/react": "^1.2.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

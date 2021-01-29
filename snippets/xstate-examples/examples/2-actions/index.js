@@ -1,6 +1,6 @@
 import { interpret } from 'xstate';
 import makeMachine from './machine';
-import { makeLightRenderer } from '../../shared';
+import makeLightRenderer from './makeLightRenderer';
 
 const rootElement = document.querySelector('#root');
 const render = makeLightRenderer(rootElement);

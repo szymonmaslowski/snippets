@@ -1,13 +1,5 @@
-const { assign, interpret } = require('xstate');
-const makeMachine = require('./machine');
-
-const machine = makeMachine({
-  logContext: ctx => console.info('Context', ctx),
-  logBump: (ctx, event) => console.info('Bumping by', event.count),
-  bumpCount: assign({
-    count: (ctx, event) => ctx.count + event.count,
-  }),
-});
+const { interpret } = require('xstate');
+const machine = require('./machine');
 
 const service = interpret(machine).start();
 

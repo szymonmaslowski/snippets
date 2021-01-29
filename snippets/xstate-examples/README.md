@@ -37,21 +37,34 @@ Topics:
 - default context value
 - reading the context by the action
 - setting the context
+- self transitions without specifying target
 
 ## 4. Guards
-
-## 5. React
 
 ```
 yarn start:4
 ```
 
 Topics:
+- guards
+- final state
+
+## 5. React
+
+```
+yarn start:5
+```
+
+Topics:
 - hooks
 - transient state
 - delayed transitions
-- final state
 
 ## 6. Invoking services
 
-## 7. Actors
+```
+yarn start:6
+```
+
+Topics:
+- running services returning promises
