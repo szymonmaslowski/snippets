@@ -3,7 +3,7 @@ import { createMachine } from 'xstate';
 /**
  * 1. Defining actions in options
  * 2. Three types of actions
- * 3. Invoking actions specifying names or inligning
+ * 3. Invoking actions specifying names or inlining
  * 4. Invoking multiple actions
  */
 
@@ -14,26 +14,22 @@ const makeMachine = ({ fireRed, fireYellow, fireGreen, log }) =>
       initial: 'stop',
       states: {
         stop: {
-          entry: [fireRed, () => log('Entered stop')],
-          exit: () => log('Quiting stop'),
+          entry: fireRed,
           on: {
             CHANGE: 'prepare',
           },
         },
         prepare: {
-          entry: ['fireYellow', () => log('Entered stop')],
-          exit: 'logQuitingPrepareState',
+          entry: ['fireYellow'],
           on: {
             CHANGE: 'go',
           },
         },
         go: {
           entry: 'fireGreen',
-          exit: 'logQuitingGoState',
           on: {
             CHANGE: {
               target: 'stop',
-              actions: [() => log('Received CHANGE action')],
             },
           },
         },
