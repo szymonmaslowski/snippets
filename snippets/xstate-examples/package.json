@@ -9,7 +9,8 @@
     "start:3": "node ./examples/3-context",
     "start:4": "node ./examples/4-guards",
     "start:5": "serve ./examples/5-react",
-    "start:6": "serve ./examples/6-invoking-services"
+    "start:6": "serve ./examples/6-invoking-services",
+    "start:8": "serve ./examples/8-nesting-machines"
   },
   "dependencies": {
     "@xstate/react": "^1.2.2",

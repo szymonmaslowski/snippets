@@ -73,4 +73,12 @@ Topics:
 
 https://codesandbox.io/s/e3xnp?file=/src/signup/index.js
 
+## 8. Nesting machines
 
+```
+yarn start:8
+```
+
+Topics:
+- using invoke
+- using spawn
