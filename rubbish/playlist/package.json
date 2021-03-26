@@ -1,0 +1,11 @@
+{
+  "name": "playlist",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "googleapis": "^58.0.0",
+    "open": "^7.1.0",
+    "server-destroy": "^1.0.1"
+  }
+}

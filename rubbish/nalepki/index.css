@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&subset=latin,latin-ext&display=swap');
+
+html,
+body {
+  margin: 0;
+  font-family: 'Dancing Script', cursive;
+  /*font-family: "Iowan Old Style";*/
+  font-style: italic;
+  /*letter-spacing: 10px;*/
+}
+
+canvas {
+  box-shadow: 0 10px 20px #aaa;
+  /*border: 1px solid #000;*/
+  margin: 20px;
+  height: calc(3508px / 2.83);
+  width: calc(2480px / 2.83);
+}
