@@ -2,11 +2,13 @@ const fallbackComponent = () => '';
 const refs = new Set();
 const cleanups = new Set();
 let counter = 0;
+
 const getId = () => {
   const currentId = counter;
   counter += 1;
   return currentId;
 };
+
 const hook = callback => {
   const id = getId();
   refs.add({
@@ -15,6 +17,7 @@ const hook = callback => {
   });
   return `data-ref="${id}"`;
 };
+
 const makeComponent = (component = fallbackComponent) => ({
   children,
   ...restProps
@@ -26,6 +29,7 @@ const makeComponent = (component = fallbackComponent) => ({
     },
     { hook },
   );
+
 const render = (tree, element) => {
   cleanups.forEach(cleanup => cleanup());
   cleanups.clear();
