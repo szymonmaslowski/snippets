@@ -10,7 +10,7 @@
     "start:all": "node src all"
   },
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "mime-types": "^2.1.27",
     "modulik": "^0.2.3",
     "pem": "^1.14.4"
